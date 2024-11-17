@@ -7,7 +7,7 @@ on:
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:
-      - live
+      - main
 permissions:
   contents: write
   pull-requests: write  # this permission is required in order to allow PR comment with staging URL
@@ -32,7 +32,7 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_KIND_BUSH_001B39203 }}
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for GitHub integrations (i.e. PR comments)
           action: "upload"
-          production_branch: "live"
+          production_branch: "main"
           app_location: "" # App source code path relative to repository root
           api_location: "" # Api source code path relative to repository root - optional
           output_location: "site" # Built app content directory, relative to app_location - optional
