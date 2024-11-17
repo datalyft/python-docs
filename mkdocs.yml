@@ -1,0 +1,20 @@
+site_name: Easy Docs
+
+theme:
+  name: material
+  palette: 
+    - scheme: blue
+      toggle:
+        icon: material/lightbulb
+        name: Switch to dark mode
+
+    - scheme: slate
+      toggle:
+        icon: material/lightbulb-on
+        name: Switch to light mode
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
