@@ -16,6 +16,16 @@ Easy deployable python project documentation.
 5. Choose your hosting plan (Free is an option)
 6. Set GitHub as source and login
 7. Select your project
-8. Choose "Deployment Token" at the deployment configuration
-9. Select your region
-10. Deploy the app
+8. At the build presets, choose custom
+9. Leave the app location intact as root ("/"), the Api location blank and set the the Output location to "site"
+10. Choose "Deployment Token" at the deployment configuration
+11. Select your region
+12. Deploy the app
+13. Add the following code block within the Checkout and Build & Deploy steps within your workflow:
+```yml
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - run: mkdocs build
+```

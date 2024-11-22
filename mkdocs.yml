@@ -1,7 +1,17 @@
 site_name: Easy Docs
 
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+
 theme:
   name: material
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
   palette: 
     - scheme: blue
       toggle:
@@ -18,3 +28,8 @@ plugins:
 
 nav:
   - Home: index.md
+  - Admonitions:
+    - Page: nested/index.md
+  - Annotations:
+    - Level:
+      - Page: multi-nest/level/index.md
